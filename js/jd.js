@@ -85,7 +85,6 @@ function getMyOrders( uname, curPage ){
     $('.pager').append('<li><a href="#">当前页</a></li>');
     $('.pager').append('<li><a href="#">当前页+1</a></li>');
     $('.pager').append('<li><a href="#">当前页+2</a></li>');   
-    /******大家加油！！！******/
   });    
 }
 
