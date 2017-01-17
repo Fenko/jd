@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title> 用户中心 — 京东商城 </title>
+  <meta charset="utf-8"/>
+  <link rel="icon" href="img/favicon.ico">
+  <link rel="stylesheet" href="jd.css">
+ </head>
+
+ <body>
+  <div id="header"></div>
+  <div id="main">
+    <div class="affix">
+      <h4>用户中心</h4>
+      <ul>
+        <li><a href="#my-order-container">我的订单</a></li>
+        <li><a href="#buy-stat-container">消费统计(原生版)</a></li>
+        <li><a href="#buy-stat-container-fc">消费统计(FC版)</a></li>
+        <li class="active"><a href="#luck-lottery-container">幸运抽奖</a></li>
+      </ul>  
+    </div>
+    <div class="container">
+      <!-- 我的订单 -->
+      <div id="my-order-container">
+        <table id="order-table">
+          <thead>
+            <tr>
+              <th>订单信息</th>
+              <th>收货人</th>
+              <th>订单金额</th>
+              <th>
+                <select id="">
+                  <option value="m1">最近一个月</option>
+                  <option value="m3">最近三个月</option>
+                  <option value="m6">最近半年</option>
+                </select>
+              </th>
+              <th>
+                <select id="">
+                  <option value="0">全部状态</option>
+                  <option value="1">等待付款</option>
+                  <option value="2">派货中</option>
+                  <option value="3">订单完成</option>
+                </select>
+              </th>
+              <th>操作</th>
+            </tr>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+        <!-- 分页条 -->
+        <ul class="pager">
+          <!--<li><a href="#">1</a></li>
+          <li><a href="#">2</a></li>
+          <li class="active"><a href="#">3</a></li>
+          <li><a href="#">4</a></li>
+          <li><a href="#">5</a></li>-->
+        </ul>
+      </div>
+      <!-- 消费统计(原生版) -->
+      <div id="buy-stat-container">
+        <canvas id="canvas-buy-stat">
+          您的浏览器不支持Canvas绘图！
+        </canvas>
+      </div>
+      <!-- 消费统计(FC版) -->
+      <div id="buy-stat-container-fc">消费统计(FC版)</div>
+      <!-- 幸运抽奖 -->
+      <div class="active" id="luck-lottery-container">
+        <button id="bt-lottery" type="button" disabled>正在加载抽奖统计信息...</button> <br><br>
+        <canvas id="canvas-lottery"></canvas>
+      </div>
+    </div>
+  </div>
+  <div id="footer"></div>
+
+  <!--模态登录对话框-->
+  <div class="modal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <h4>用户登录</h4>
+        <p class="alert">
+          请在此处输入您的注册信息。
+        </p>
+        <form id="login-form">
+          <input type="text" placeholder="请输入登录用户名" name="uname" value="qiangdong">
+          <input type="password" placeholder="请输入登录密码" name="upwd" value="123456">
+          <input type="button" value="提交登录信息" id="bt-login">  
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/jquery-1.11.3.js"></script>
+  <script src="js/fusioncharts.js"></script>
+  <script src="js/fusioncharts.charts.js"></script>
+
+  <script src="js/jd.js"></script>
+
+ </body>
+</html>
